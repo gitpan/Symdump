@@ -1,0 +1,42 @@
+Subject: Devel::Symdump-1.19 fancy dump-the-symbol-table package
+
+
+Devel::Symdump is a tiny, primitiv package to access perl's symbol
+table in a convenient way. It allows to take snapshots of the symbol
+table during execution of a program for further processing or for
+immediate printout. It can be regarded of a superior successor to
+dumpvar.pl.
+
+Each snapshot is an object and can be accessed by the methods
+packages(), scalars(), arrays(), hashes(), functions(), filehandles(),
+dirhandles(), and unknowns(). Both a recursive walk through all
+packages and dumping restricted to chosen packages is available.
+
+WHAT'S NEW
+
+The current version adds an as_string method that formats the whole
+object in a trivial way. This is handy for quick tours through programs
+and saves some typing. The formatting is not as sophisticated as it
+was in early versions of this package. Nothing but an energy saver.
+
+Other than that I have rewritten the test scripts, so they can be used
+in the standard way of 'make test'.
+
+YOU CAN GET IT FROM
+
+<HTML>
+<A HREF="ftp://franz.ww.tu-berlin.de/pub/perl/Symdump-1.19.shar">Klick here</A>
+</HTML>
+      (about 26k, most of it test harness)
+
+Unpack it wherever you want, and run the commands:
+
+    perl Makefile.PL
+    make test
+    make install                      # as root
+
+See the test scripts for examples of the usage. The Module contains
+its own pod.
+
+I hope you enjoy it,
+andreas koenig
